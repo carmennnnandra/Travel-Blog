@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+
+html, body{
+    margin:0%;
+    box-sizing: border-box;
+    overflow-x:hidden;
+    font-family: 'Raleway', sans-serif;
+}
+a{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: black;
+    font-size:2rem;
+
+
+}
+
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+
+}
+
+h1{
+    font-family: 'Vidaloka', serif;
+    font-size: 2.5rem;
+    text-align:center;
+}
+
+p{
+    font-family:'Raleway', sans-serif;
+        font-size: 1rem;
+        color:black;
+    }
+button.btn{
+    border:none;
+    border-radius:2rem;
+    padding:1rem 3rem;
+    font-size:1rem;
+    text-align:center;
+    justify-content: center;
+    cursor:pointer;
+
+}
+h3{
+    font-family:'Abel', sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.nav{
+    background:white;
+    padding:0.2rem;
+    
+    overflow: hidden;
+    z-index: 999999;
+
+}
+.nav .nav-menu{
+   justify-content: space-between;
+
+}
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+
+}
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size:1.1rem;
+    position:relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+}
+.nav .nav-items .nav-link:hover{
+    background-color: midnightblue;
+}
+.nav .nav-items .nav-link:hover a{
+    color:whitesmoke;
+}
+
+.nav .nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: 'Abel', sans-serif;
+    font-family: 'Satisfy', cursive;
+
+   
+}
+
+.nav .social{
+    padding:1.4rem 1rem;
+}
+.nav .social i{
+    padding:0.3rem;
+}
+.nav .social i:hover{
+    color: blue;
+}
+
+main .site-title{
+    background: url('../imagini/banner.jpg');
+    background-size: cover;
+    height: 200vh;
+    font-size: 1.7rem;
+    color:white;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+}
+main .site-title h1, h3{
+    margin:.5rem;
+}
+main .site-title .btn{
+    margin: 1.8rem;
+    background: skyblue;
+}
+
+main .site-title .btn:hover{
+    background:transparent;
+    border:1px solid white;
+    color:white;
+}
+main .site-content{
+    display:grid;
+    grid-template-columns: 100%;
+}
+
+main .post-content{
+    width:100%;
+    margin-bottom:7rem;
+}
+
+
+main .post-content .post-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+main img{
+    display:block;
+    width: 400px;
+    max-width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 1%;
+    transition:2s linear;
+    margin: 1rem 1.5rem;
+}
+main img:hover{
+	transform: scale(1.1);
+}
+/* body{
+    font-family: 'Raleway', sans-serif;
+	height:100vh;
+	min-height:550px;
+	background-image: url(http://www.planwallpaper.com/static/images/Free-Wallpaper-Nature-Scenes.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+    overflow-y: hidden;
+} */
+.login-reg-panel{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	text-align:center;
+    width:70%;
+    margin:auto;
+    height:400px;
+    background-color: rgba(236, 48, 20, 0.9);
+    
+}
+.white-panel{
+    background-color: rgba(255,255, 255, 1);
+    height:500px;
+    position:absolute;
+    top:50px;
+    width:50%;
+    right:calc(50% - 50px);
+    transition:.3s ease-in-out;
+    z-index:0;
+    box-shadow: 0 0 15px 9px #00000096;
+    
+}
+.login-reg-panel input[type="radio"]{
+    position:relative;
+    display:none;
+}
+.login-reg-panel{
+    color:#B8B8B8;
+}
+.login-reg-panel #label-login, 
+.login-reg-panel #label-register{
+    border:1px solid #9E9E9E;
+    padding:5px 5px;
+    width:150px;
+    display:block;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight: 600;
+    font-size: 18px;
+}
+.login-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    left:0;
+    position:absolute;
+    text-align:left;
+}
+.register-info-box{
+    width:30%;
+    padding:0 50px;
+    top:20%;
+    right:0;
+    position:absolute;
+    text-align:left;
+    
+}
+.right-log{right:50px !important;}
+
+.login-show, 
+.register-show{
+    z-index: 1;
+    display:none;
+    opacity:0;
+    transition:0.3s ease-in-out;
+    color:#242424;
+    text-align:left;
+    padding:50px;
+}
+.show-log-panel{
+    display:block;
+    opacity:0.9;
+}
+.login-show input[type="text"], .login-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.login-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float:right;
+    cursor:pointer;
+}
+.login-show a{
+    display:inline-block;
+    padding:10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="password"]{
+    width: 100%;
+    display: block;
+    margin:20px 0;
+    padding: 15px;
+    border: 1px solid #b5b5b5;
+    outline: none;
+}
+.register-show input[type="button"] {
+    max-width: 150px;
+    width: 100%;
+    background: #444444;
+    color: #f9f9f9;
+    border: none;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float:right;
+    cursor:pointer;
+}
+.credit {
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color: #3B3B25;
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 99;
+}
+
+footer.footer{
+    height:100%;
+    background:blanchedalmond;
+    position:relative;
+}
+footer.footer .container{
+    display:grid;
+    grid-template-columns: 20% 20% 60%;
+    color:black;
+}
+footer.footer .container >div{
+    flex-grow:1;
+    flex-basis: 0;
+    padding: .3rem .9rem;
+}
+footer.footer .container h2{
+    color:black;
+}
+footer.footer .instagram div >img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
